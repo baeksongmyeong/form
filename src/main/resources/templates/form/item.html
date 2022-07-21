@@ -40,6 +40,16 @@
 
     <hr class="my-4">
 
+<!--/* 추가 코드 시작 */-->
+    <div>판매여부</div>
+    <div>
+        <div>
+            <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled/>
+            <label for="open" class="form-check-label">판매오픈</label>
+        </div>
+    </div>
+<!--/* 추가 코드 종료 */-->
+
     <div class="row">
         <div class="col">
             <button class="w-100 btn btn-primary btn-lg"
