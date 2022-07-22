@@ -28,15 +28,14 @@ public class ItemRepository {
     }
 
     public void update(Long itemId, Item updateParam) {
-        Item foundItem = findById(itemId);
-        foundItem.setItemName(updateParam.getItemName());
-        foundItem.setPrice(updateParam.getPrice());
-        foundItem.setQuantity(updateParam.getQuantity());
-        // 추가필드
-        foundItem.setOpen(updateParam.getOpen());
-        foundItem.setRegions(updateParam.getRegions());
-        foundItem.setItemType(updateParam.getItemType());
-        foundItem.setDeliveryCode(updateParam.getDeliveryCode());
+        Item findItem = findById(itemId);
+        findItem.setItemName(updateParam.getItemName());
+        findItem.setPrice(updateParam.getPrice());
+        findItem.setQuantity(updateParam.getQuantity());
+        findItem.setOpen(updateParam.isOpen());
+        findItem.setRegions(updateParam.getRegions());
+        findItem.setItemType(updateParam.getItemType());
+        findItem.setDeliveryCode(updateParam.getDeliveryCode());
     }
 
     public void clearStore() {

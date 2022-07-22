@@ -12,11 +12,17 @@ public class Item {
     private Integer price;
     private Integer quantity;
 
-    // 추가된 필드
-    private Boolean open;
+    //판매여부
+    private boolean open;
+
+    //등록지역
     private List<String> regions;
+
+    //상품종류
     private ItemType itemType;
-    private DeliveryCode deliveryCode;
+
+    //배송방식
+    private String deliveryCode;
 
     public Item() {
     }
